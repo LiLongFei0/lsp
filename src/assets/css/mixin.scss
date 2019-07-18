@@ -1,0 +1,6 @@
+@mixin type-icon($left:0px, $top:0px){
+    background-image: url(~@/assets/img/type.png);
+    background-size: 80px 80px; 
+    background-repeat: no-repeat;
+    background-position: $left $top;
+}

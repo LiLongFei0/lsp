@@ -1,0 +1,127 @@
+/*table头部样式*/
+th {
+    border-top: 2px solid $primary !important;
+    background-color: $div-bg !important;
+    border-bottom: 2px solid $primary !important;
+}
+
+/*查询页面 多选按钮样式*/
+.repair-search-div .el-checkbox-button__inner{
+    border:0px;
+    border-left: 0px!important;
+    padding:6px 12px;
+    margin-right:6px;
+    border-radius: 4px!important;
+}
+
+/*查询页面 单选按钮样式*/
+.repair-search-div .el-radio-button__inner{
+    border:0px;
+    border-left: 0px!important;
+    padding:6px 12px;
+    margin-right:6px;
+    border-radius: 4px!important;
+}
+
+/*table按钮*/
+.table-button-div{
+    display: inline-block;
+    cursor: pointer;
+    padding:0 7px;
+    position: relative;
+}
+
+.table-button-div:after{
+    content: '';
+    position: absolute;
+    left: auto;
+    top: auto;
+    bottom: 4px;
+    right: -1px;
+    height: 64%;
+    width: 1px;
+    background-color: $border;
+}
+
+.table-button-div:last-child:after{
+    width: 0px;
+}
+
+.table-button-icon{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 2px;
+}
+
+.table-button-label{
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+/*菜单*/
+.nav-header_icon{
+    @include icon-image(-14px, -48px);
+}
+
+/*menu菜单图标*/
+.menu_hover{
+    background-color: #3366CC;
+    color:#ffffff;
+}
+
+.rsp-page_icon .nav-menu_icon{
+    @include menu-icon(0px, -30px);
+}
+
+.rsp-page_icon:hover{
+    @extend .menu_hover;
+    .nav-menu_icon{
+        @include menu-icon(0px, 0px);
+    }
+}
+
+.rsp-page_icon_active {
+    @extend .rsp-page_icon:hover;
+}
+
+.sys-user-page_icon{
+    @include menu-icon(0px, -60px);
+}
+
+/*repair状态颜色*/
+.primary-color{
+    color:$primary;
+}
+
+.success-color{
+    color:$success;
+}
+
+.warning-color{
+    color:$warning;
+}
+
+.danger-color{
+    color:$danger;
+}
+
+.primary-progress{
+    @include icon-image(-42px, -48px);
+}
+
+.success-progress{
+    @include icon-image(-28px, -48px);
+}
+
+.warning-progress{
+    @include icon-image(-28px, -62px);
+}
+
+.danger-progress{
+    @include icon-image(-42px, -62px);
+}
+
+  

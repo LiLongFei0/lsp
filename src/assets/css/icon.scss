@@ -1,0 +1,620 @@
+/*后台图标*/
+@mixin icon-image($left:0px, $top:0px){
+    background-image: url(~@/assets/img/icon.png);
+    background-size: 180px 116px; 
+    background-repeat: no-repeat;
+    background-position: $left $top;
+}
+
+/*前台图标*/
+@mixin icon-image_front($left:0px, $top:0px){
+    background-image: url(~@/assets/img/front_icon.png);
+    background-size: 300px 282px; 
+    background-repeat: no-repeat;
+    background-position: $left $top;
+}
+
+/*导航栏菜单*/
+.nav-header_icon{
+    @include icon-image(-14px, -48px);
+}
+
+/*导航栏菜单*/
+.nav-header_icon_active{
+    @include icon-image(-14px, -48px);
+    /* @include icon-image(-14px, -62px); */
+}
+
+/*面包屑-首页*/
+.gm-icon_home{
+    @include icon-image(-56px, -48px);
+}
+
+.gm-icon_home:hover{
+    @include icon-image(-56px, -62px);
+}
+
+/*table按钮*/
+.table-button-div{
+    display: inline-block;
+    cursor: pointer;
+    padding:0 7px;
+    position: relative;
+}
+
+.table-button-div:after{
+    content: '';
+    position: absolute;
+    left: auto;
+    top: auto;
+    bottom: 4px;
+    right: -1px;
+    height: 64%;
+    width: 1px;
+    background-color: $border;
+}
+
+.table-button-div:last-child:after{
+    width: 0px;
+}
+
+.table-button-icon{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 2px;
+}
+
+.table-button-label{
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+/*编辑*/
+.edit-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(0px, 0px);
+    }
+}
+
+.edit-button:hover{
+    color:$primary-hover;
+    cursor: pointer;
+    .table-button-icon{
+        @include icon-image(0px, -12px);
+    }
+}
+
+/*设置*/
+.set-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-48px, 0px);
+    }
+}
+
+.set-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-48px, -12px);
+    }
+}
+
+/*人员*/
+.user-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-60px, 0px);
+    }
+}
+
+.user-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-60px, -12px);
+    }
+}
+
+/*启用*/
+.able-button{
+    color:$success;
+
+    .table-button-icon{
+        @include icon-image(-24px, 0px);
+    }
+}
+
+.able-button:hover{
+    color:$success-hover;
+
+    .table-button-icon{
+        @include icon-image(-24px, -12px);
+    }
+}
+
+/*禁用*/
+.enable-button{
+    color:$warning;
+
+    .table-button-icon{
+        @include icon-image(-36px, 0px);
+    }
+}
+
+.enable-button:hover{
+    color:$warning-hover;
+
+    .table-button-icon{
+        @include icon-image(-36px, -12px);
+    }
+}
+
+/*详情*/
+.detail-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-156px, -0px);
+    }
+}
+
+.detail-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-156px, -12px);
+    }
+}
+
+/*历史*/
+.history-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-132px, -24px);
+    }
+}
+
+.history-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-132px, -36px);
+    }
+}
+
+/*草稿*/
+.draft-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-144px, -24px);
+    }
+}
+
+.draft-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-144px, -36px);
+    }
+}
+
+/*提交*/
+.submit-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-84px, -24px);
+    }
+}
+
+.submit-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-84px, -36px);
+    }
+}
+
+/*通过*/
+.through-button{
+    color:$success;
+
+    .table-button-icon{
+        @include icon-image(-96px, -24px);
+    }
+}
+
+.through-button:hover{
+    color:$success-hover;
+
+    .table-button-icon{
+        @include icon-image(-96px, -36px);
+    }
+}
+
+/*驳回*/
+.reject-button{
+    color:$danger;
+
+    .table-button-icon{
+        @include icon-image(-108px, -24px);
+    }
+}
+
+.reject-button:hover{
+    color:$danger-hover;
+
+    .table-button-icon{
+        @include icon-image(-108px, -36px);
+    }
+}
+
+/*回访*/
+.visit-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-120px, -0px);
+    }
+}
+
+.visit-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-120px, -12px);
+    }
+}
+
+/*进度*/
+.progress-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-144px, -0px);
+    }
+}
+
+.progress-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-144px, -12px);
+    }
+}
+
+/*操作*/
+.do-button{
+    color:$primary;
+
+    .table-button-icon{
+        @include icon-image(-120px, -24px);
+    }
+}
+
+.do-button:hover{
+    color:$primary-hover;
+
+    .table-button-icon{
+        @include icon-image(-120px, -36px);
+    }
+}
+
+/*删除*/
+.del-button{
+    color:$danger;
+
+    .table-button-icon{
+        @include icon-image(-12px, 0px);
+    }
+}
+
+.del-button:hover{
+    color:$danger-hover;
+    cursor: pointer;
+    .table-button-icon{
+        @include icon-image(-12px, -12px);
+    }
+}
+
+/*登录页icon*/
+/*登录-账号*/
+.login-name{
+    @include icon-image(0px, -76px);
+}
+
+.login-name_hover{
+    @include icon-image(0px, -96px);
+}
+
+/*登录-密码*/
+.login-pwd{
+    @include icon-image(-20px, -76px);
+}
+
+.login-pwd_hover{
+    @include icon-image(-20px, -96px);
+}
+
+/*登录-扫码成功*/
+.login-success{
+    @include icon-image(-84px, -48px);
+}
+
+/*维修前台icon*/
+/*排名*/
+.rank-icon{
+    @include icon-image_front(0px, -150px);
+}
+
+.rank-icon_1{
+    @include icon-image_front(-30px, -150px);
+}
+
+.rank-icon_2{
+    @include icon-image_front(-54px, -150px);
+}
+
+.rank-icon_3{
+    @include icon-image_front(-78px, -150px);
+}
+
+.repair-icon_1{
+    @include icon-image_front(-30px, -174px);
+}
+
+.repair-icon_2{
+    @include icon-image_front(-54px, -174px);
+}
+
+.repair-icon_3{
+    @include icon-image_front(-78px, -174px);
+}
+
+.like-icon{
+    @include icon-image_front(0px, -180px);
+}
+
+.like-icon_1{
+    @include icon-image_front(-30px, -198px);
+}
+
+.like-icon_2{
+    @include icon-image_front(-54px, -198px);
+}
+
+.like-icon_3{
+    @include icon-image_front(-78px, -198px);
+}
+
+/*我要报修*/
+.repair-icon{
+    @include icon-image_front(-126px, -150px);
+}
+
+.repair-icon_hover{
+    @include icon-image_front(-126px, -174px);
+}
+
+/*报修到顶部-top*/
+.repair-top-icon{
+    @include icon-image_front(-102px, -150px);
+}
+
+.repair-top-icon_hover{
+    @include icon-image_front(-102px, -174px);
+}
+
+/*服务监督前台icon*/
+/*回复效率排名*/
+.reply-rank-icon{
+    @include icon-image_front(0px, -222px);
+}
+
+.reply-rank-icon_1{
+    @include icon-image_front(-30px, -222px);
+}
+
+.reply-rank-icon_2{
+    @include icon-image_front(-54px, -222px);
+}
+
+.reply-rank-icon_3{
+    @include icon-image_front(-78px, -222px);
+}
+
+.satis-rank-icon{
+    @include icon-image_front(0px, -252px);
+}
+
+.satis-rank-icon_1{
+    @include icon-image_front(-30px, -246px);
+}
+
+.satis-rank-icon_2{
+    @include icon-image_front(-54px, -246px);
+}
+
+.satis-rank-icon_3{
+    @include icon-image_front(-78px, -246px);
+}
+
+/*我要发帖*/
+.post-icon{
+    @include icon-image_front(-126px, -222px);
+}
+
+.post-icon_hover{
+    @include icon-image_front(-126px, -246px);
+}
+
+/*发帖到顶部-top*/
+.post-top-icon{
+    @include icon-image_front(-102px, -222px);
+}
+
+.post-top-icon_hover{
+    @include icon-image_front(-102px, -246px);
+}
+
+//刷新
+.flush-button{
+    color: $primary;
+    .table-button-icon{
+        @include icon-image(-48px,-25px);
+    }
+}
+
+.flush-button:hover{
+    color: $primary-hover;
+    cursor: pointer;
+    .table-button-icon{
+        @include icon-image(-48px,-37px);
+    }
+}
+
+//查看
+.lookover-button{
+    color: $primary;
+    .table-button-icon{
+        @include icon-image(-72px,0px);
+    }
+}
+
+.lookover-button:hover{
+    color: $primary-hover;
+    cursor: pointer;
+    .table-button-icon{
+        @include icon-image(-72px,-12px);
+    }
+}
+
+//服务监督前台
+.ssp-lookover-button{
+    .table-button-icon{
+        @include icon-image(-168px,0px);
+    }
+}
+.ssp-lookover-button:hover{
+    color: $primary-hover;
+    cursor: pointer;
+    .table-button-icon{
+        @include icon-image(-168px,-12px);
+    }
+}
+
+//列表
+.list-button{
+    color:$primary;
+    .table-button-icon{
+        @include icon-image(-60px,-24px)
+    }
+}
+.list-button:hover{
+    color:$primary-hover;
+    .table-button-icon{
+        @include icon-image(-60px,-30px)
+    }
+}
+
+//逐条审核
+.itemaudit-button{
+    color: $primary;
+    .table-button-icon{
+        @include icon-image(-72px,-24px)
+    }
+}
+.itemaudit-button:hover{
+    color:$primary-hover;
+    cursor: pointer;
+    .table-button-icon{
+        @include icon-image(-72px,-36px)
+    }
+}
+
+//回复消息
+.msg-button{
+    color:$primary;
+    .table-button-icon{
+        @include icon-image(0px,-24px)
+    }
+}
+.msg-button:hover{
+    color:$primary-hover;
+    cursor: pointer;
+    .table-button-icon{
+        @include icon-image(0px,-36px)
+    }
+}
+//转办
+.turn-button{
+    color:$primary;
+    .table-button-icon{
+        @include icon-image(-12px ,-24px);
+    }
+}
+.turn-button:hover{
+    color:$primary-hover;
+    .table-button-icon{
+        @include icon-image(-12px,-36px);
+    }
+}
+//申诉
+.appeal-button{
+    color:$primary;
+    .table-button-icon{
+        @include icon-image(-24px ,-24px)
+    }
+}
+.appeal-button:hover{
+    color:$primary-hover;
+    .table-button-icon{
+        @include icon-image(-24px ,-36px)
+    }
+}
+
+//上传图片
+.upload-button{
+    color:$primary;
+    .table-button-icon{
+        @include icon-image(0px ,-48px)
+    }
+}
+.upload-button:hover{
+    color:$primary-hover;
+    .table-button-icon{
+        @include icon-image(0px ,-62px)
+    }
+}
+//帖子回复评论删除
+.dele-button{
+    color:$primary;
+    font-size: 12px;
+    .table-button-icon{
+        @include icon-image(-132px,0px);
+    }
+}
+
+.dele-button:hover{
+    color:$primary-hover;
+    cursor: pointer;
+    font-size: 12px;
+    .table-button-icon{
+        @include icon-image(-132px,-12px);
+    }
+}
+
+i{
+    font-style: normal
+}
+

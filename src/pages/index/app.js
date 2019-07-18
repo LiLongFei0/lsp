@@ -8,6 +8,9 @@ import '@/assets/css/_elementcss.scss';
 
 import App from './App.vue'
 import router from './router/index.js'
+
+import api from '@/api/install'
+Vue.use(api)
 Vue.config.productionTip = false
 
 Vue.use(ElementUI);

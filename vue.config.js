@@ -36,7 +36,7 @@ module.exports = {
         }
     },
     chainWebpack: config => {
-        let arr = ["home", "index"];
+        let arr = ["home", "index", "login"];
         arr.forEach((v) => {
             config.plugins.delete(`prefetch-${v}`)
             config.plugins.delete(`preload-${v}`)
