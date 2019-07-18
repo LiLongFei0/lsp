@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>编辑器</h1>
     <div id="summernote"></div>
   </div>
 </template>
