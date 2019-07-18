@@ -13,6 +13,7 @@ import api from '@/api/install'
 Vue.use(api)
 
 Vue.use(ElementUI);
+require("./mock.js")
 new Vue({
   router,
   render: h => h(App),

@@ -48,5 +48,8 @@ export default {
 	//首页-服务指南
 	getGuide: base.sspUrl + '/ssp/guide',
 	//首页-指南详情
-	guideDetail: base.sspUrl + '/rsp/guide/detail'
+	guideDetail: base.sspUrl + '/rsp/guide/detail',
+	
+	//测试
+	testMock: base.baseUrl + '/get_user'
 }

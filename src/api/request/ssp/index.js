@@ -131,5 +131,12 @@ export default {
 		let url = urls.guideDetail;
 		id == 0 || (url += '/' + id);
 		return api[method](url, params, headers)
+	},
+
+	//测试
+	testMock(params, method = 'get', id = 0, headers) {
+		let url = urls.testMock;
+		id == 0 || (url += '/' + id);
+		return api[method](url, params, headers)
 	}
 }
