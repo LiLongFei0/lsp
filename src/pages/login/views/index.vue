@@ -68,7 +68,9 @@
             <el-tab-pane label="APP登录" name="app">
               <div style="width:280px;height:200px;">
                 <div class="login-body_qrcode" v-loading="codeLoading">
-                  <div id="app_scan"></div>
+                  <div id="app_scan">
+                    <img />
+                  </div>
                 </div>
                 <div v-if="over_code" class="login-body_qrcode_over">
                   <div class="qrocde-over-text">二维码已失效</div>
@@ -92,7 +94,9 @@
             <el-tab-pane label="微信扫码" name="wx">
               <div style="width:280px;height:200px;">
                 <div class="login-body_qrcode" v-loading="codeLoading">
-                  <div id="wx_scan"></div>
+                  <div id="wx_scan">
+                    <img />
+                  </div>
                 </div>
                 <div v-if="over_code" class="login-body_qrcode_over">
                   <div class="qrocde-over-text">二维码已失效</div>
@@ -260,12 +264,14 @@ export default {
       vue.loginLoading = false;
     },
     async getAppScan() {
+      //获取二维码
       let vue = this;
       vue.codeLoading = true;
       let res = await vue.$api.consoleSys.getAppScan();
       let data = res.data;
       vue.bind_id = data.bind_key;
-      $("#app_scan").html(data.code);
+      $("#app_scan > img").attr("src", "data:image/png;base64," + data.code);
+      //$("#app_scan").html(data.code);
       vue.codeLoading = false;
       vue.over = 0;
       vue.over_code = false;
@@ -286,7 +292,8 @@ export default {
       let res = await vue.$api.consoleSys.getWxScan();
       let data = res.data;
       vue.bind_id = data.bind_key;
-      $("#wx_scan").html(data.code);
+      $("#wx_scan > img").attr("src", "data:image/png;base64," + data.code);
+      //$("#wx_scan").html(data.code);
       vue.codeLoading = false;
       vue.over = 0;
       vue.over_code = false;
@@ -301,6 +308,7 @@ export default {
       }, 1000);
     },
     async getAppStatus() {
+      //扫描
       let vue = this;
       let params = {
         bind_id: vue.bind_id
@@ -599,10 +607,10 @@ export default {
 
 #app_scan,
 #wx_scan {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 0px;
   display: inline-block;
 }
 </style>

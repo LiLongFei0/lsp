@@ -14,6 +14,11 @@ export default new VueRouter({
             path: '/edit',
             name: '编辑器',
             component: () => import('./../views/edit.vue')
+        },
+        {
+            path:'/canvas',
+            name:'画图',
+            component:()=>import('./../views/canvas.vue')
         }
     ]
 })

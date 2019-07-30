@@ -13,6 +13,12 @@ export default {
 	role: base.consoleUrl + '/roles',
 	//权限管理（菜单权限）
 	node: base.consoleUrl + '/nodes',
+	//获取APP登录二维码
+	getAppScan: base.consoleUrl + '/scan_code/show',
+	//获取微信登录二维码
+	getWxScan: base.consoleUrl + '/wx_scan_code/show',
+	//获取二维码状态
+	getScanStatus: base.consoleUrl + '/scan/status',
 	//登录
 	login: base.consoleUrl + '/login',
 	//登出

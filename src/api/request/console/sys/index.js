@@ -44,6 +44,24 @@ export default {
 		url += '/' + id;
 		return api[method](url, params, headers)
 	},
+	//获取APP二维码
+	getAppScan(params, method = 'get', id = 0, headers) {
+		let url = urls.getAppScan;
+		id == 0 || (url += '/' + id);
+		return api[method](url, params, headers)
+	},
+	//获取微信二维码
+	getWxScan(params, method = 'get', id = 0, headers) {
+		let url = urls.getWxScan;
+		id == 0 || (url += '/' + id);
+		return api[method](url, params, headers)
+	},
+	//获取二维码状态
+	getScanStatus(params, method = 'get', id = 0, headers) {
+		let url = urls.getScanStatus;
+		id == 0 || (url += '/' + id);
+		return api[method](url, params, headers)
+	},
 	//登录
 	login(params, method = 'get', id = 0, headers) {
 		let url = urls.login;
